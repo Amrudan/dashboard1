@@ -1,0 +1,78 @@
+[
+    {
+      "id": 1,
+      "wardNumber": "W001",
+      "wardType": "General",
+      "capacity": 20,
+      "currentOccupancy": 15,
+      "nurseInCharge": "Alice Johnson",
+      "status": "Active",
+      "floor": "1st Floor",
+      "description": "General ward for minor illnesses",
+      "equipment": "Basic beds, monitoring equipment",
+      "lastMaintenance": "2025-03-10",
+      "nextMaintenance": "2025-06-10",
+      "specialNotes": "Ensure regular cleaning"
+    },
+    {
+      "id": 2,
+      "wardNumber": "W002",
+      "wardType": "ICU",
+      "capacity": 10,
+      "currentOccupancy": 8,
+      "nurseInCharge": "Dr. Robert Smith",
+      "status": "Full",
+      "floor": "2nd Floor",
+      "description": "Intensive care unit for critical patients",
+      "equipment": "Ventilators, heart monitors",
+      "lastMaintenance": "2025-02-20",
+      "nextMaintenance": "2025-05-20",
+      "specialNotes": "Strict isolation rules apply"
+    },
+    {
+      "id": 3,
+      "wardNumber": "W003",
+      "wardType": "Emergency",
+      "capacity": 15,
+      "currentOccupancy": 10,
+      "nurseInCharge": "Sarah Lee",
+      "status": "Active",
+      "floor": "Ground Floor",
+      "description": "Emergency ward for immediate care",
+      "equipment": "Emergency beds, trauma care tools",
+      "lastMaintenance": "2025-01-15",
+      "nextMaintenance": "2025-04-15",
+      "specialNotes": "24/7 availability required"
+    },
+    {
+      "id": 4,
+      "wardNumber": "W004",
+      "wardType": "Maternity",
+      "capacity": 12,
+      "currentOccupancy": 6,
+      "nurseInCharge": "Linda Brown",
+      "status": "Reserved",
+      "floor": "1st Floor",
+      "description": "Ward for expecting mothers and newborn care",
+      "equipment": "Delivery beds, neonatal care units",
+      "lastMaintenance": "2025-03-05",
+      "nextMaintenance": "2025-06-05",
+      "specialNotes": "Only authorized visitors allowed"
+    },
+    {
+      "id": 5,
+      "wardNumber": "W005",
+      "wardType": "Psychiatric",
+      "capacity": 8,
+      "currentOccupancy": 4,
+      "nurseInCharge": "James Wilson",
+      "status": "Active",
+      "floor": "3rd Floor",
+      "description": "Psychiatric care ward",
+      "equipment": "Counseling rooms, therapy tools",
+      "lastMaintenance": "2025-02-28",
+      "nextMaintenance": "2025-05-28",
+      "specialNotes": "Close monitoring required"
+    }
+  ]
+  

@@ -1,0 +1,37 @@
+{
+  "staff": [
+    {
+      "id": 1,
+      "firstName": "John",
+      "lastName": "Smith",
+      "role": "Doctor",
+      "specialization": "Cardiology",
+      "yearsOfExperience": 15,
+      "gender": "Male",
+      "email": "john.smith@hospital.com",
+      "mobile": "+1234567890",
+      "address": "123 Medical Center Dr",
+      "nic": "123456789V",
+      "dob": "1980-05-15",
+      "status": "Online",
+      "isEmergencyDoctor": true,
+      "rating": 4.8,
+      "department": "Cardiology"
+    },
+    {
+      "id": 2,
+      "firstName": "Sarah",
+      "lastName": "Johnson",
+      "role": "Nurse",
+      "department": "ICU",
+      "yearsOfExperience": 10,
+      "gender": "Female",
+      "email": "sarah.j@hospital.com",
+      "mobile": "+1234567891",
+      "address": "456 Hospital Ave",
+      "nic": "987654321V",
+      "dob": "1985-08-20",
+      "status": "Online"
+    }
+  ]
+} 

@@ -7,6 +7,8 @@ const WardManagement = () => {
   const [error, setError] = useState(null);
   const [selectedWard, setSelectedWard] = useState(null);
   const [isEditing, setIsEditing] = useState(false);
+  const [searchQuery, setSearchQuery] = useState('');
+  const [filteredWards, setFilteredWards] = useState([]);
 
   const [formData, setFormData] = useState({
     wardNumber: '',
@@ -114,6 +116,24 @@ const WardManagement = () => {
     });
   };
 
+  const handleSearch = () => {
+    if (!searchQuery) {
+      alert('Please enter a ward number');
+      return;
+    }
+
+    // Filter wards based on ward number
+    const results = wards.filter(ward => 
+      ward.wardNumber.toString().toLowerCase().includes(searchQuery.toLowerCase())
+    );
+
+    setFilteredWards(results);
+
+    if (results.length === 0) {
+      alert('No wards found with this number');
+    }
+  };
+
   return (
     <div className="ward-management-page">
       <h2>Ward Management</h2>
@@ -123,9 +143,16 @@ const WardManagement = () => {
           <input 
             type="text" 
             placeholder="Search by Ward Number"
+            value={searchQuery}
+            onChange={(e) => setSearchQuery(e.target.value)}
             className="search-input"
           />
-          <button className="search-btn">Search</button>
+          <button 
+            className="search-btn"
+            onClick={handleSearch}
+          >
+            Search
+          </button>
         </div>
       </div>
 
@@ -315,7 +342,7 @@ const WardManagement = () => {
               </tr>
             </thead>
             <tbody>
-              {wards.map(ward => (
+              {(filteredWards.length > 0 ? filteredWards : wards).map(ward => (
                 <tr key={ward.id}>
                   <td>{ward.wardNumber}</td>
                   <td>{ward.wardType}</td>

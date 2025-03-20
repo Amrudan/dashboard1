@@ -2,6 +2,7 @@ const express = require('express');
 const fs = require('fs').promises;
 const path = require('path');
 const cors = require('cors');
+const router = express.Router();
 
 const app = express();
 app.use(cors());
@@ -62,6 +63,31 @@ app.delete('/api/staff/:id', async (req, res) => {
     res.json(staffData.staff);
   } catch (error) {
     res.status(500).json({ error: 'Error deleting staff member' });
+  }
+});
+
+// NIC verification endpoint
+router.post('/api/verify-nic', async (req, res) => {
+  try {
+    const { nic } = req.body;
+    
+    // Here you would connect to the official government API or database
+    const response = await fetch('https://government-api.example.com/verify-nic', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': 'Your-API-Key'
+      },
+      body: JSON.stringify({ nic })
+    });
+
+    const data = await response.json();
+    res.json(data);
+  } catch (error) {
+    res.status(500).json({ 
+      status: 'error', 
+      message: 'Verification service unavailable' 
+    });
   }
 });
 
